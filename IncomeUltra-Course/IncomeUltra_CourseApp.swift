@@ -25,7 +25,7 @@ struct IncomeUltra_CourseApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppStartingView()
         }
         .modelContainer(sharedModelContainer)
     }
