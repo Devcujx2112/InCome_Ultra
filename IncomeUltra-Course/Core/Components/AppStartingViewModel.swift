@@ -5,8 +5,8 @@
 //  Created by Vu Tung Duong on 9/3/26.
 //
 
-import Foundation
 import Combine
+import Foundation
 
 @MainActor
 final class AppStartingViewModel: ObservableObject {

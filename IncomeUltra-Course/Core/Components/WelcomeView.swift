@@ -9,15 +9,38 @@ import SwiftUI
 
 struct WelcomeView: View {
     @Binding var shouldShowWelcomeView: Bool
+    @StateObject private var viewModel = WelcomeViewModel()
+
     var body: some View {
-        VStack(spacing: 20){
-            Text("Welcome View")
-            
-            Button{
-                shouldShowWelcomeView = false
-            }label: {
-                Text("Get Started")
+        VStack {
+            title
+            Spacer()
+            VStack(spacing: 0) {
+                welcomeImage
+                welcomeText
             }
+            Spacer()
+            getStartedButton
+        }
+    }
+}
+
+private extension WelcomeView {
+    var title: some View {
+        Text(viewModel.getAppName()).font(.title).fontWeight(.bold)
+    }
+
+    var welcomeImage: some View {
+        Image(.welcome).resizable().scaledToFit().frame(maxWidth: .infinity)
+    }
+
+    var welcomeText: some View {
+        Text(viewModel.getTitleAppName()).font(.title3).fontWeight(.medium).multilineTextAlignment(.center).foregroundStyle(Color.appTheme.secondaryText)
+    }
+
+    var getStartedButton: some View {
+        Button {} label: {
+            Text(viewModel.getLabelButtonStarted())
         }
     }
 }

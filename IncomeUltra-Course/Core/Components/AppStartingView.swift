@@ -1,23 +1,23 @@
 //
-//  ContentView.swift
+//  AppStartingView.swift
 //  IncomeUltra-Course
 //
 //  Created by Vu Tung Duong on 9/3/26.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 struct AppStartingView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
 
-    @StateObject var viewModel = AppStartingViewModel()
+    @StateObject private var viewModel = AppStartingViewModel()
     var body: some View {
-        Group{
+        Group {
             if viewModel.shouldShowWelcomeView {
                 WelcomeView(shouldShowWelcomeView: $viewModel.shouldShowWelcomeView)
-            }else{
+            } else {
                 HomeTabView()
             }
         }

@@ -5,8 +5,8 @@
 //  Created by Vu Tung Duong on 9/3/26.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 @main
 struct IncomeUltra_CourseApp: App {
