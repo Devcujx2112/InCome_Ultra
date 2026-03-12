@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		40A18C6C2F6327DB00FB323F /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 40A18C6B2F6327DB00FB323F /* Factory */; };
+		40A18C6E2F6327DB00FB323F /* FactoryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 40A18C6D2F6327DB00FB323F /* FactoryKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		402E78FC2F5E1BEB0015A898 /* IncomeUltra-Course.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IncomeUltra-Course.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40A18C6E2F6327DB00FB323F /* FactoryKit in Frameworks */,
+				40A18C6C2F6327DB00FB323F /* Factory in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +72,8 @@
 			);
 			name = "IncomeUltra-Course";
 			packageProductDependencies = (
+				40A18C6B2F6327DB00FB323F /* Factory */,
+				40A18C6D2F6327DB00FB323F /* FactoryKit */,
 			);
 			productName = "IncomeUltra-Course";
 			productReference = 402E78FC2F5E1BEB0015A898 /* IncomeUltra-Course.app */;
@@ -94,6 +103,9 @@
 			);
 			mainGroup = 402E78F32F5E1BEB0015A898;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				40A18C6A2F6327DB00FB323F /* XCRemoteSwiftPackageReference "Factory" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 402E78FD2F5E1BEB0015A898 /* Products */;
 			projectDirPath = "";
@@ -330,6 +342,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		40A18C6A2F6327DB00FB323F /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		40A18C6B2F6327DB00FB323F /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40A18C6A2F6327DB00FB323F /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+		40A18C6D2F6327DB00FB323F /* FactoryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40A18C6A2F6327DB00FB323F /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = FactoryKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 402E78F42F5E1BEB0015A898 /* Project object */;
 }

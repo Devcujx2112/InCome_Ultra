@@ -8,8 +8,34 @@
 import SwiftUI
 
 struct HomeTabView: View {
+    let iconDollar: String = "dollarsign.square.fill"
+    let iconSetting: String = "gear"
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView{
+            incomeTabItemView
+            settingTabView
+        }
+    }
+}
+
+private extension HomeTabView{
+    var incomeTabItemView: some View{
+        NavigationStack{
+            IncomeView()
+        }
+        .tabItem {
+            Image(systemName: iconDollar)
+                Text("Income")
+        }
+    }
+    var settingTabView: some View{
+        NavigationStack{
+            SettingView()
+        }
+        .tabItem {
+            Image(systemName: iconSetting)
+                Text("Setting")
+        }
     }
 }
 
